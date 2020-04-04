@@ -1,0 +1,38 @@
+@mixin bold 
+    font-family: 'Proxima Nova Semibold', sans-serif
+
+
+@mixin light
+    font-family: 'Proxima Nova Light', sans-serif
+
+@mixin regular
+    font-family: 'Proxima Nova Regular', sans-serif
+
+@mixin xbold
+    font-family: 'Proxima Nova Bold', sans-serif
+
+$text-color: #262626
+$text-color-light: #7b7b79
+$primary: #507fe1
+
+body
+   +regular
+   color: $text-color
+
+.button-o
+    text-transform: uppercase
+    border: 2px solid $primary
+    color: $primary
+    padding: 17px 22px
+    font-size: 12px
+    +bold
+    background: transparent
+
+.button
+    text-transform: uppercase
+    padding: 25px 45px
+    border: none
+    background-color: $primary
+    color: #ffffff
+    +bold
+   
