@@ -178,11 +178,13 @@ body {
           transform: translateY(-200%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  opacity: 0;
 }
 
 .menu_active {
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
+  opacity: 1;
 }
 
 .menu__nav {
