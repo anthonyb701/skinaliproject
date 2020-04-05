@@ -8,7 +8,6 @@
       display: flex
       justify-content: space-between
       align-items: center
-      min-height: 80px
    &__mobile
       text-align: right
    &__phone, &__landline
@@ -48,6 +47,8 @@
       text-transform: uppercase
       +xbold 
       margin-bottom: 5px
+   &__description
+      color: $text-color-light
 .menu
    z-index: 0
    position: fixed
@@ -61,7 +62,7 @@
    transform: translateY(-200%)
    transition: 0.2s
    &_active
-      transform: translateY(0%)
+      transform: translateY(-200%)
    &__nav
       display: flex
       align-items: center
@@ -71,3 +72,22 @@
       text-transform: uppercase
       text-decoration: none
       color: #ffffff
+
+@media ( max-width: 991px)
+   .navbar
+      &__mobile, &__landline
+         display: none   
+@media ( max-width: 576px)
+   .menu
+      transform: translateY(-200%)
+      &__nav
+         flex-direction: column
+      &__link
+         margin-bottom: 20px
+         
+
+   &-button
+      height: 60px !important
+   .logo
+      display: none
+      

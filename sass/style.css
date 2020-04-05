@@ -8,6 +8,25 @@
   margin: auto;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
 body {
   font-family: 'Proxima Nova Regular', sans-serif;
   color: #262626;
@@ -19,7 +38,7 @@ body {
   color: #507fe1;
   padding: 17px 22px;
   font-size: 12px;
-  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-family: 'Proxima Nova Bold', sans-serif;
   background: transparent;
 }
 
@@ -82,7 +101,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 80px;
 }
 
 .navbar__mobile {
@@ -142,6 +160,10 @@ body {
   margin-bottom: 5px;
 }
 
+.logo__description {
+  color: #7b7b79;
+}
+
 .menu {
   z-index: 0;
   position: fixed;
@@ -159,8 +181,8 @@ body {
 }
 
 .menu_active {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
 }
 
 .menu__nav {
@@ -179,6 +201,34 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 20px;
+  }
+  -button {
+    height: 60px !important;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 .hero {
@@ -204,5 +254,19 @@ body {
   font-size: 30px;
   font-family: 'Proxima Nova Bold', sans-serif;
   margin-bottom: 67px;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-top: 60px;
+    background-position: top left 35%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
