@@ -20,6 +20,15 @@ body
    +regular
    color: $text-color
 
+.section
+    margin: 100px 0
+    &__title
+        font-size: 30px
+        text-transform: uppercase
+        text-align: center
+        +xbold
+        margin-bottom: 100px
+
 .button-o
     text-transform: uppercase
     border: 2px solid $primary
@@ -36,4 +45,9 @@ body
     background-color: $primary
     color: #ffffff
     +bold
-   
+
+@media (max-width: 768px)
+    .section
+        margin-bottom: 50px 0
+        &__title
+            font-size: 24px   
