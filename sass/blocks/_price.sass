@@ -1,0 +1,51 @@
+.price
+   &-block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+   &-card 
+      position: relative
+      margin-bottom: 10px
+      &__pricetag
+         display: flex
+         justify-content: space-between
+         align-items: center
+         font-size: 15px
+         z-index: 2
+      &__text
+         padding: 20px
+         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1)
+      &__title
+         margin: 0;
+         font-size: 15px;
+      &__cost
+         +bold
+      &__button
+         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1)
+         width: 100%
+         position: absolute
+         padding: 20px
+         padding-top: 0
+         bottom: 0
+         left: 0
+         text-align: center
+         background-color: #ffffff
+         height: 80px
+         z-index: -1
+         display: none
+      &__button>button
+         &:hover
+            cursor: pointer
+   &-card:hover 
+      .price-card__button
+        bottom: -80px
+        z-index: 99
+        display: block
+@media (max-width: 1199px)
+   .price
+      &-block
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        &__card
+           margin-bottom: 30px

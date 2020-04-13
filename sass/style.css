@@ -118,6 +118,7 @@ body {
   top: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 999;
 }
 
 .navbar-wrap {
@@ -689,6 +690,92 @@ body {
   }
   .blog-list__card {
     margin: 0px 30px 40px;
+  }
+}
+
+.price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.price-card {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.price-card__pricetag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  z-index: 2;
+}
+
+.price-card__text {
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.price-card__title {
+  margin: 0;
+  font-size: 15px;
+}
+
+.price-card__cost {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.price-card__button {
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: absolute;
+  padding: 20px;
+  padding-top: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: #ffffff;
+  height: 80px;
+  z-index: -1;
+  display: none;
+}
+
+.price-card__button > button:hover {
+  cursor: pointer;
+}
+
+.price-card:hover .price-card__button {
+  bottom: -80px;
+  z-index: 99;
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .price-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .price-block__card {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
