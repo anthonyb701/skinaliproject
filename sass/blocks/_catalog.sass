@@ -1,0 +1,82 @@
+.catalog
+   background-color: #f1f1f1;
+   &__block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+   &__card
+      margin-bottom: 30px
+      max-width: 570px 
+   &__link
+      text-align: center
+      padding-top: 60px
+   &__button
+      display: inline-block
+      margin-bottom: 24px;
+   &__description
+      display: block
+   &-card
+      position: relative
+      box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+      max-width: 570px 
+      &__tag
+         position: absolute
+         top: 10px
+         left: 10px
+         font-size: 13px
+         padding: 10px
+         background-color: rgba($primary, 0.7)
+         +regular
+         color: #ffffff
+         text-transform: uppercase;
+      &__image
+         max-width: 100%
+         display: block
+      &__buttons
+         position: absolute
+         bottom: 0
+         right: 0
+         display: flex
+         transition: 0.2s
+         opacity: 0
+         transform: translateY(100%)
+.button
+   &__fitting
+      color: $primary
+      background-color: #ffffff
+   &__add
+      color: #ffffff
+      background-color: #7c9fe8;
+   &__like
+      padding: 0
+      background-color: $primary
+      height: 30px;
+      width: 30px;
+      border: none;
+.catalog-card
+   &:hover .catalog-card__buttons
+      transform: translateY(0%)
+      opacity: 1
+@media (max-width: 1199px)
+   .catalog
+      &__card
+         max-width: 470px
+@media (max-width: 991px)
+   .catalog
+      &__card
+         max-width: 570px
+         margin-bottom: 50px
+      &__block
+         justify-content: center
+         margin-top: -40px
+@media (max-width: 576px)
+   .catalog
+      &__card
+         max-width: 570px
+         margin-bottom: 30px
+      &__block
+         justify-content: center
+         margin-top: -60px
+
+
+         
