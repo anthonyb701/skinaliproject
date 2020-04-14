@@ -119,6 +119,8 @@ body {
   width: 100%;
   background-color: #fff;
   z-index: 999;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-wrap {
@@ -776,6 +778,92 @@ body {
   }
   .price-block__card {
     margin-bottom: 30px;
+  }
+}
+
+.step {
+  background-color: #f1f1f1;
+}
+
+.step-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.steps-block:last-child:before {
+  display: none;
+}
+
+.steps-block:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.8);
+  display: block;
+  position: absolute;
+  top: 25%;
+  right: -58%;
+}
+
+.steps__title {
+  font-size: 18px;
+}
+
+.steps__text {
+  max-width: 140px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .step-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .steps-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 50%;
+  }
+  .steps-block:before {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
