@@ -1011,4 +1011,49 @@ body {
     max-width: 400px;
   }
 }
+
+@media (max-width: 400px) {
+  .factory__image {
+    max-width: 320px;
+  }
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts-block__item {
+  text-align: center;
+}
+
+.contacts__text {
+  font-size: 16px;
+}
+
+.contacts__text a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.contacts__image {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .contacts-block__item {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  .contacts__text {
+    width: 200px;
+    margin: auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */
