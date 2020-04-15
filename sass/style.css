@@ -1074,7 +1074,7 @@ body {
 }
 
 .questions__link {
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
   color: #507fe1;
   padding-bottom: 3px;
@@ -1089,6 +1089,7 @@ body {
   background-color: #507fe1;
   border-bottom: none;
   padding: 10px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1106,6 +1107,109 @@ body {
   .questions-block {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+.footer {
+  background-color: #262626;
+  color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__title {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer__subtitle {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.footer__copyright {
+  color: #767676;
+}
+
+.footer__pay {
+  min-width: 347px;
+  margin: 0 auto;
+}
+
+.footer__pay-logo {
+  margin: 15px;
+}
+
+.footer__phone {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.footer__contacts {
+  text-align: right;
+}
+
+.footer__mail {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__icons__link {
+  margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+  .footer__phone {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__pay {
+    margin-bottom: 25px;
+    min-width: 100%;
+  }
+  .footer__contacts a {
+    text-align: center;
+  }
+  .footer__icons {
+    text-align: center;
+    margin-right: -6px;
   }
 }
 /*# sourceMappingURL=style.css.map */

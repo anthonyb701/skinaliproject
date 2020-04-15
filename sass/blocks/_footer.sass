@@ -1,0 +1,61 @@
+.footer
+   background-color: #262626
+   color: #ffffff
+   padding-top: 70px
+   padding-bottom: 30px
+   a
+      text-decoration: none 
+      color: #ffffff
+   &-block
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+   &__title
+      +bold 
+      margin-top: 0px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      text-transform: uppercase
+   &__subtitle
+      display: block
+      margin-bottom: 48px;
+   &__copyright
+      color: #767676
+   &__pay
+      min-width: 347px
+      margin:  0 auto
+      &-logo
+         margin: 15px
+   &__phone
+      display: block;
+      margin-bottom: 20px;
+      font-size: 20px;
+      +bold
+   &__contacts
+      text-align: right
+   &__mail
+      display: block;
+      margin-bottom: 20px;
+   &__icons
+      &__link
+         margin-right: 10px
+@media (max-width: 991px)
+   .footer
+      &__phone
+         font-size: 18px
+@media (max-width: 768px)
+   .footer
+      &-block
+         flex-direction: column
+         text-align: center
+         justify-content: center
+         align-items: center
+      &__pay
+         margin-bottom: 25px
+         min-width: 100%
+      &__contacts
+         a
+            text-align: center
+      &__icons
+         text-align: center;
+         margin-right: -6px;
