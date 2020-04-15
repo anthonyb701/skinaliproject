@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фабрика Скинали</title>
     <link rel="stylesheet" href="sass/normalize.css">
+    <link rel="stylesheet" href="sass/twentytwenty.css">
     <link rel="stylesheet" href="sass/style.css">
 </head>
 <body>
@@ -543,6 +544,52 @@
             <!-- /.container -->
         </section>
         <!-- /.section step -->
+        <div class="section before">
+            <div class="container">
+                <h2 class="section__title">До и После</h2>
+                <!-- /.section__title -->
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/sample-before.png" alt="">
+                                <img src="img/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <!-- /.before-slider__item -->
+                        <div class="before-slider__item">
+                                <div class="before-after">
+                                    <img src="img/hero-before.jpg" alt="">
+                                    <img src="img/hero-after.jpg" alt="">
+                                </div>
+                        </div>
+                        <!-- /.before-slider__item -->
+                        <div class="before-slider__item">
+                                <div class="before-after">
+                                    <img src="img/sample-before.png" alt="">
+                                    <img src="img/sample-after.png" alt="">
+                                </div>
+                        </div>
+                        <!-- /.before-slider__item -->
+                    </div>
+                    <!-- /.before-slider -->
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/left.png" alt="">
+                        </button>
+                         <!-- /.arrow arrow-left -->
+                         <button class="arrow arrow-right">
+                             <img src="img/right.png" alt="">
+                         </button> 
+                         <!-- /.arrow arrow-left -->
+                    </div>
+                    <!-- /.before-slider-arrows -->
+                </div>
+                <!-- /.before-slider-wrap -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section before -->
         <section class="section reviews">
             <div class="container">
                 <h2 class="section__title">Отзывы наших клиентов</h2>
@@ -662,7 +709,7 @@
         </section>
         <!-- /.section contacts -->
         <div class="map" id="map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A358c5e968aa2cd15bf5cac4f7ee5c095c66049082ee6874bcbab06b530d2b284&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A358c5e968aa2cd15bf5cac4f7ee5c095c66049082ee6874bcbab06b530d2b284&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </div>
         <!-- /.map map -->
         <section class="section questions">
@@ -720,5 +767,27 @@
     <!-- /.main -->
     <!-- Подключение Spikmi -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=3113"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    
+    <script>
+        $(window).load(function() {
+            $(".before-after").twentytwenty({
+            before_label: 'Без скинали', // set 
+            after_label: 'Со скинали'
+           });
+           $('.before-slider').slick({
+            draggable: false,
+            dots: true,
+            dotsClass: 'before__dots',
+            prevArrow: $('.arrow-left'),
+            nextArrow: $('.arrow-right'),
+            touchMove: false,
+            swipe: false
+           });
+        });
+    </script>
 </body>
 </html>
