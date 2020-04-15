@@ -1,4 +1,5 @@
 .contacts
+   background-color: #f6f7f9
    &-block
       display: flex
       justify-content: space-between
@@ -12,6 +13,33 @@
          color: $text-color
    &__image
       margin-bottom: 25px
+.questions
+   background-color: #ffffff!important
+   padding: 40px 0
+   &-block
+      display: flex
+      justify-content: space-around
+      align-items: center
+      max-width: 700px
+      margin: auto
+   &__title
+      font-size: 30px
+      +bold 
+   &__link
+      font-size: 20px  
+      text-decoration: none
+      color: $primary
+      padding-bottom: 3px
+      border-bottom: 1px solid $primary
+      transition: 0.3s
+      &:hover
+         margin-top: -4px
+         color: #ffffff
+         background-color: $primary
+         border-bottom: none
+         padding: 10px
+
+
 @media (max-width: 768px)
    .contacts
       &-block
@@ -21,4 +49,8 @@
       &__text
          width: 200px
          margin: auto
+@media (max-width: 576px)
+   .questions
+      &-block
+         flex-wrap: wrap 
          
