@@ -4,7 +4,7 @@
    top: 0
    width: 100%
    background-color: #fff
-   z-index: 999
+   z-index: 9999
    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1)
    &-wrap
       display: flex
@@ -26,6 +26,7 @@
       text-decoration: none
 
    .menu
+      position: relative
       &-button
          display: flex 
          flex-direction: column
@@ -52,7 +53,7 @@
    &__description
       color: $text-color-light
 .menu
-   z-index: 0
+   z-index: 999
    position: fixed
    top: 80px
    padding-top: 16px
@@ -81,13 +82,14 @@
    .navbar
       &__mobile, &__landline
          display: none   
-@media ( max-width: 576px)
+@media ( max-width: 768px)
    .menu
-      transform: translateY(-200%)
+      transform: translateY(0)
       &__nav
          flex-direction: column
       &__link
          margin-bottom: 20px
+         font-size: 20px
          
 
    &-button

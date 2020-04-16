@@ -30,10 +30,16 @@
 body {
   font-family: 'Proxima Nova Regular', sans-serif;
   color: #262626;
+  z-index: 1;
+  position: relative;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  z-index: 0;
 }
 
 .section {
@@ -224,7 +230,7 @@ a {
   top: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 999;
+  z-index: 9999;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -259,6 +265,10 @@ a {
   font-size: 14px;
   color: #7b7b79;
   text-decoration: none;
+}
+
+.navbar .menu {
+  position: relative;
 }
 
 .navbar .menu-button {
@@ -303,7 +313,7 @@ a {
 }
 
 .menu {
-  z-index: 0;
+  z-index: 999;
   position: fixed;
   top: 80px;
   padding-top: 16px;
@@ -349,10 +359,10 @@ a {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .menu {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .menu__nav {
     -webkit-box-orient: vertical;
@@ -362,6 +372,7 @@ a {
   }
   .menu__link {
     margin-bottom: 20px;
+    font-size: 20px;
   }
   -button {
     height: 60px !important;
