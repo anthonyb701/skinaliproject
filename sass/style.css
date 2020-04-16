@@ -267,10 +267,6 @@ img {
   text-decoration: none;
 }
 
-.navbar .menu {
-  position: relative;
-}
-
 .navbar .menu-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,7 +309,6 @@ img {
 }
 
 .menu {
-  z-index: 999;
   position: fixed;
   top: 80px;
   padding-top: 16px;
@@ -333,6 +328,7 @@ img {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
+  z-index: 999;
 }
 
 .menu__nav {
@@ -360,10 +356,6 @@ img {
 }
 
 @media (max-width: 768px) {
-  .menu {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
   .menu__nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

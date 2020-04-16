@@ -26,7 +26,6 @@
       text-decoration: none
 
    .menu
-      position: relative
       &-button
          display: flex 
          flex-direction: column
@@ -53,7 +52,6 @@
    &__description
       color: $text-color-light
 .menu
-   z-index: 999
    position: fixed
    top: 80px
    padding-top: 16px
@@ -65,9 +63,11 @@
    transform: translateY(-200%)
    transition: 0.2s
    opacity: 0
+
    &_active
       transform: translateY(0%)
       opacity: 1
+      z-index: 999
    &__nav
       display: flex
       align-items: center
@@ -84,7 +84,6 @@
          display: none   
 @media ( max-width: 768px)
    .menu
-      transform: translateY(0)
       &__nav
          flex-direction: column
       &__link
