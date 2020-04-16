@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="sass/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="menu menu_active">
+    <header class="header" id="header">
+        <div class="menu">
             <div class="container">
                 <nav class="menu__nav">
-                    <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Преимущества</a>
-                    <a href="#" class="menu__link">Каталог</a>
-                    <a href="#" class="menu__link">Цены и виды</a>
-                    <a href="#" class="menu__link">Этапы работ</a>
-                    <a href="#" class="menu__link">Отзывы</a>
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="#header" class="menu__link scroll_2">Главная</a>
+                    <a href="#feature" class="menu__link scroll_2">Преимущества</a>
+                    <a href="#catalog" class="menu__link scroll_2">Каталог</a>
+                    <a href="#price" class="menu__link scroll_2">Цены и виды</a>
+                    <a href="#step" class="menu__link scroll_2">Этапы работ</a>
+                    <a href="#reviews" class="menu__link scroll_2">Отзывы</a>
+                    <a href="#contacts" class="menu__link scroll_2">Контакты</a>
                 </nav>         
             </div>
         </div>
@@ -43,7 +43,7 @@
                         <a class="navbar__landline" href="tel: +7 499 123-45-67">+7 499 123-45-67</a>
                         <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu ">info@mail.cu</a>
                     </div>
-                    <button class="button-o navbar__button">Получить консультацию</button>
+                    <a href="#offer" class="button-o navbar__button scroll_1">Получить консультацию</a>
                 </div>
                 <!-- /.navbar-wrap -->   
             </div>
@@ -56,7 +56,7 @@
                     Гарантия минимальной цены на скинали
                 </h2>
                 <span class="hero__subtitle">от 3000 р/м2</span>
-                <button class="button hero_button">Заказать скинали</button>
+                <a href="#offer" class="button hero_button scroll_1">Заказать скинали</a>
             </div>
             <!-- /.container -->
         </div>
@@ -64,7 +64,7 @@
     </header>
     <!-- /.header -->
     <main class="main">
-        <section class="offer offer-secondary">
+        <section class="offer offer-secondary" id="offer">
             <div class="container">
                 <div class="offer-block">
                     <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -73,17 +73,24 @@
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="type" class="form__label">Вид стекла</label>
-                                <input type="text" id="type" class="form__input">
+                                <input type="hidden" id="select-type" value="С печатью">
+                                <div class="select form__select">
+                                    <div class="select_checked">С печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью">С печатью</li>
+                                        <li class="select__option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group">
                                 <label for="width" class="form__label">Ширина, см</label>
-                                <input type="text" id="width" class="form__input">
+                                <input type="number" id="width" class="form__input">
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group">
                                 <label for="height" class="form__label">Высота, см</label>
-                                <input type="text" id="height" class="form__input">
+                                <input type="number" id="height" class="form__input">
                             </div>
                             <!-- /.form__group -->
                         </div>
@@ -103,7 +110,7 @@
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group">
-                                <input type="text" placeholder="Ваш телефон" class="form__input">
+                                <input type="tel" placeholder="Ваш телефон" class="form__input">
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group">
@@ -122,7 +129,7 @@
             </div>
         </section>
         <!-- /.offer -->
-        <section class="section section-feature">
+        <section class="section section-feature" id="feature">
             <div class="container">
                 <h2 class="section__title">Наши преимущества</h2>
                 <!-- /.section__text -->
@@ -169,7 +176,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section section-features -->
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section__title">Каталог скинали</h2>
                 <div class="catalog__block">
@@ -294,7 +301,7 @@
             </div>
         </section> 
         <!-- /.section catalog -->  
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <main class="container">
                 <div class="blog__heading">
                     <h3 class="blog__heading__title">Полезное или что важно знать о скинали</h3>
@@ -338,7 +345,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section blog --> 
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section__title">Цены и виды скинали</h2>
                 <!-- /.section__title -->
@@ -485,7 +492,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section price --> 
-        <section class="section step">
+        <section class="section step" id="step">
             <div class="container">
                 <h2 class="section__title">Этапы работ</h2>
                 <!-- /.section__title -->
@@ -544,7 +551,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section step -->
-        <div class="section before">
+        <div class="section before" id="before">
             <div class="container">
                 <h2 class="section__title">До и После</h2>
                 <!-- /.section__title -->
@@ -590,44 +597,47 @@
             <!-- /.container -->
         </div>
         <!-- /.section before -->
-        <section class="section reviews">
+        <section class="section reviews" id="reviews">
             <div class="container">
-                <h2 class="section__title">Отзывы наших клиентов</h2>
+                <h2 class="section__title section__title__without">Отзывы наших клиентов</h2>
                 <!-- /.h2 section__title -->
-                <div class="reviews-slider">
-                    <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...
+                <div class="reviews-wrap">
+                    <div class="reviews-slider">
+                        <div class="reviews-slider__item">
+                            <div class="reviews-slider__text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...
+                            </div>
+                            <!-- /.review-slider__text -->
+                            <img src="img/review-1.png" alt="" class="reviews-slider__image">
+                            <span class="reviews-slider__title">Мария Макарова<br>Москва</span> <!-- /.reviews-slider__title -->
                         </div>
-                        <!-- /.review-slider__text -->
-                        <img src="img/review-1.png" alt="" class="reviews-slider__image">
-                        <span class="reviews-slider__title">Мария Макарова<br>Москва</span> <!-- /.reviews-slider__title -->
+                        <!-- /.reviews-slider__item -->
+                        <div class="reviews-slider__item">
+                            <div class="reviews-slider__text">
+                            Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения,и удобное мобильное приложение.   
+                        </div>
+                            <!-- /.review-slider__text -->
+                            <img src="img/review-2.png" alt="" class="reviews-slider__image">
+                            <span class="reviews-slider__title">Екатерина Иванова<br>Москва</span> <!-- /.reviews-slider__title -->
+                        </div>
+                        <!-- /.reviews-slider__item -->
+                        <div class="reviews-slider__item">
+                            <div class="reviews-slider__text">
+                            Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского. 
+                        </div>
+                            <!-- /.review-slider__text -->
+                            <img src="img/review-3.png" alt="" class="reviews-slider__image">
+                            <span class="reviews-slider__title">Владимир Некрасов<br>Москва</span> <!-- /.reviews-slider__title -->
+                        </div>
+                        <!-- /.reviews-slider__item -->
                     </div>
-                    <!-- /.reviews-slider__item -->
-                    <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">
-                        Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения,и удобное мобильное приложение.   
-                    </div>
-                        <!-- /.review-slider__text -->
-                        <img src="img/review-2.png" alt="" class="reviews-slider__image">
-                        <span class="reviews-slider__title">Екатерина Иванова<br>Москва</span> <!-- /.reviews-slider__title -->
-                    </div>
-                    <!-- /.reviews-slider__item -->
-                    <div class="reviews-slider__item">
-                        <div class="reviews-slider__text">
-                        Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского. 
-                    </div>
-                        <!-- /.review-slider__text -->
-                        <img src="img/review-3.png" alt="" class="reviews-slider__image">
-                        <span class="reviews-slider__title">Владимир Некрасов<br>Москва</span> <!-- /.reviews-slider__title -->
-                    </div>
-                    <!-- /.reviews-slider__item -->
+                    <!-- /.review-slider -->
                 </div>
-                <!-- /.review-slider -->
+                <!-- /.reviews-wrap -->
             </div>
             <!-- /.container -->
         </section>
         <!-- /.section reviews -->
-        <section class="offer offer-price">
+        <section class="offer offer-price" id="offer-price">
             <div class="container">
                 <div class="offer-block offer-block-price">
                     <h2 class="offer__title">Ищете где дешевле и лучше?</h2>
@@ -639,7 +649,7 @@
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group"> 
-                                <input type="text" id="width" class="form__input" placeholder="Ваш телефон">
+                                <input type="tel" id="width" class="form__input" placeholder="Ваш телефон">
                             </div>
                             <!-- /.form__group -->
                             <div class="form__group">
@@ -663,7 +673,7 @@
             </div>
         </section>
         <!-- /.offer -->
-        <section class="section factory">
+        <section class="section factory" id="factory">
             <div class="container">
                 <h2 class="section__title">О производстве</h2>
                 <div class="factory-block">
@@ -679,7 +689,7 @@
             <!-- /.container -->
         </section> 
         <!-- /.section factory -->
-        <section class="section contacts">
+        <section class="section contacts" id="contacts">
             <div class="container">
                 <h2 class="section__title">Контакты</h2>
                 <!-- /.section__title -->
@@ -709,10 +719,10 @@
         </section>
         <!-- /.section contacts -->
         <div class="map" id="map">
-            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A358c5e968aa2cd15bf5cac4f7ee5c095c66049082ee6874bcbab06b530d2b284&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script> -->
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A358c5e968aa2cd15bf5cac4f7ee5c095c66049082ee6874bcbab06b530d2b284&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
         <!-- /.map map -->
-        <section class="section questions">
+        <section class="section questions" id="questions">
             <div class="container">
                 <div class="questions-block">
                     <h3 class="questions__title">Остались вопросы?</h3>
@@ -771,23 +781,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
-    
-    <script>
-        $(window).load(function() {
-            $(".before-after").twentytwenty({
-            before_label: 'Без скинали', // set 
-            after_label: 'Со скинали'
-           });
-           $('.before-slider').slick({
-            draggable: false,
-            dots: true,
-            dotsClass: 'before__dots',
-            prevArrow: $('.arrow-left'),
-            nextArrow: $('.arrow-right'),
-            touchMove: false,
-            swipe: false
-           });
-        });
-    </script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

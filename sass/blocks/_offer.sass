@@ -47,7 +47,7 @@
       border: 1px solid #ddd
       &:nth-child(2)
          border-right-width: 0
-         
+
    &__label
       display: flex
       font-size: 17px
@@ -64,7 +64,43 @@
       height: 80px
    &__policy
       max-width: 280px
-          
+.select
+   width: 100%
+   height: 80px
+   position: relative
+   border: 1px solid #ddd
+   &:after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 20px
+      background: url('../img/down-arrow.png') no-repeat center
+      height: 20px
+      width: 20px
+   &:hover
+      cursor: pointer
+   &_checked
+      padding-left: 30px
+      line-height: 80px
+   &__dropdown
+      position: absolute
+      top: 80px
+      width: 100%
+      background-color: #ffffff
+      border: 1px solid #ddd
+      margin: 0
+      list-style-type: none
+      padding: 0
+      display: none
+      &_open
+         display: block  
+   &__option
+      padding: 20px
+      &:hover
+         background-color: #f1f1f1
+      
+         
 .checkbox__label
    padding-right: 20px
    cursor: pointer

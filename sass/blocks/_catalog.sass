@@ -18,7 +18,12 @@
    &-card
       position: relative
       box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
-      max-width: 570px 
+      max-width: 570px
+      overflow-y: hidden
+      &:hover
+         .catalog-card__buttons
+            transform: translateY(0%)
+            opacity: 1      
       &__tag
          position: absolute
          top: 10px
@@ -40,6 +45,8 @@
          transition: 0.2s
          opacity: 0
          transform: translateY(100%)
+      &__button
+         cursor: pointer
 .button
    &__fitting
       color: $primary
@@ -53,10 +60,6 @@
       height: 30px;
       width: 30px;
       border: none;
-.catalog-card
-   &:hover .catalog-card__buttons
-      transform: translateY(0%)
-      opacity: 1
 @media (max-width: 1199px)
    .catalog
       &__card
